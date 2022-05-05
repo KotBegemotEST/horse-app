@@ -1,0 +1,15 @@
+block addHorse
+.addHorse.card(style="display:none")
+  .modal-dialog
+      .modal-content.card-header
+        h1 Add horse to race
+        .modal-body.card-body
+          form(role='addHorse' method='POST' action='addHorse')
+            div.form-group-horses
+              label(for='name')   Horse name:
+              input#time.form-control(type='text', name='name' placeholder="Enter horse name...")
+              label(for='color') Horse color:
+              select#colorSelect.form-control(name='color')
+              label(for='raceId') Race:
+              select#raceSelect.form-control(name='raceId')
+            button.btn.btn-primary.addHorsebtn(type="submit", name="submit") Add Horse

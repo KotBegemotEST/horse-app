@@ -1,0 +1,17 @@
+block makeRace
+.makeRace.card(style="display:none")
+  .modal-dialog
+      .modal-content.card-header
+        h1 Add a new race
+        .modal-body.card-body
+          form(role='makeRace' method='POST' action='addRace')
+            div.form-group
+              label(for='place') Place:
+              input#place.form-control(type='text', placeholder='Enter place...' name='place')  
+              label(for='time')   Time:
+              input#time.form-control(type='datetime-local', name='time')
+              label(for='min')   Minimum amount of competitors:
+              input#min.form-control(type='number', name='min')
+              label(for='max')   Maximum amount of competitors:
+              input#max.form-control(type='number', name='max')
+            button.btn.btn-primary.addRacebtn(type="submit", name="submit") Add Race

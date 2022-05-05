@@ -1,0 +1,17 @@
+block makeBet
+.makeBet.card(style="display:none")
+  .modal-dialog
+      .modal-content.card-header 
+        h1 Place you bets
+        .modal-body.card-body
+          form(role='makeBet' method='POST' action='makeBet')
+            div.form-group
+            label(for="race") which race:
+            select#race(name="race")
+
+            label(for="horse") which horse:
+            select#horse(name="horse")  
+
+            label(for="bet") Your bet:
+            input#bet(type="text" name="bet")
+            button make bet
